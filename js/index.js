@@ -46,7 +46,7 @@ function addCardClickListeners() {
     card.addEventListener("click", function () {
       const id = this.getAttribute("data-id");
       window.location.assign(
-        `http://127.0.0.1:5500/5-oyImtixon-main/page/details.html?id=${id}`
+        `http://127.0.0.1:5500/page/details.html?id=${id}`
       );
     });
   });

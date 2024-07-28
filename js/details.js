@@ -57,13 +57,11 @@ document.addEventListener("DOMContentLoaded", async function () {
           image: data.image,
         };
         addToCart(product);
-        window.location.assign(
-          "http://127.0.0.1:5500/5-oyImtixon-main/page/cart.html"
-        );
+        window.location.assign("http://127.0.0.1:5500/page/cart.html");
       });
     }
   } else {
-    window.location.assign("http://127.0.0.1:5500/5-oyImtixon-main/index.html");
+    window.location.assign("http://127.0.0.1:5500/index.html");
   }
   wrapper.style.display = "flex";
   loader.remove();

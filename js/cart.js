@@ -6,7 +6,6 @@ function getDatafromcard() {
   }
   return data;
 }
-
 function createCard(product) {
   return `
     <div class="quti">
