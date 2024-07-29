@@ -40,27 +40,28 @@ async function renderCards(category = "") {
   }
 }
 
+// function addCardClickListeners() {
+//   const cards = document.querySelectorAll(".card");
+//   cards.length &&
+//     cards.forEach((card) => {
+//       card.addEventListener("click", function () {
+//         const id = this.getAttribute("data-id");
+//         window.location.assign(
+//           `http://127.0.0.1:5500/page/details.html?id=${id}`
+//         );
+//       });
+//     });
+// }
 function addCardClickListeners() {
   const cards = document.querySelectorAll(".card");
   cards.forEach((card) => {
     card.addEventListener("click", function () {
       const id = this.getAttribute("data-id");
-      window.location.assign(
-        `http://127.0.0.1:5500/page/details.html?id=${id}`
-      );
+      let url = window.location.href.split("/index")[0];
+      window.location.assign(`${url}/page/details.html?id=${id}`);
     });
   });
 }
-// function addCardClickListeners() {
-//   const cards = document.querySelectorAll(".card");
-//   cards.forEach((card) => {
-//     card.addEventListener("click", function () {
-//       const id = this.getAttribute("data-id");
-//       let url = window.location.href.split("/index")[0];
-//       window.location.assign(`${url}/pages/details.html?id=${id}`);
-//     });
-//   });
-// }
 async function applyFilter() {
   const minPrice = minPriceInput.value;
   const maxPrice = maxPriceInput.value;
