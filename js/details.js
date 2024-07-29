@@ -57,7 +57,8 @@ document.addEventListener("DOMContentLoaded", async function () {
           image: data.image,
         };
         addToCart(product);
-        window.location.assign("http://127.0.0.1:5500/page/cart.html");
+        let url = window.location.href.split("/details")[0];
+        window.location.assign(`${url}/cart.html`);
       });
     }
   } else {
